@@ -1,24 +1,3 @@
-# react-emailify
-
-Create Email template with React + styled-components easily
-
-# Install
-
-npm
-
-```
-npm install --save react-emailify
-```
-
-yarn
-
-```
-yarn add react-emailify
-```
-
-# Usage
-
-```ts
 import * as React from 'react'
 import styled from 'styled-components'
 import emailify from 'react-emailify'
@@ -43,9 +22,9 @@ const emailTemplate = emailify(Template)
 
 // Here we compile React Compnent to string
 // by invoking emailify HOC with template vars and title.
-const emailString = emailTemplate({ 
-  message: 'Hello World'
-}, 'Hi from React Emailify')
+const message = 'Hello World'
+const title = 'Hi from React Emailify'
+const emailString = emailTemplate({ message }, title)
 
 console.log(emailString)
 
@@ -61,4 +40,3 @@ console.log(emailString)
 //       <div id="app"><div class="sc-bdVaJa cUChTh" style="font-weight: bold; color: #888;">Hello World</div></div>
 //     </body>
 // </html>
-```
